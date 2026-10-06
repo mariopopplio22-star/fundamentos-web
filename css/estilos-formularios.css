@@ -1,0 +1,158 @@
+/* ==========================================================================
+   Estilos Modernos, Planos y Elegantes para Formularios (CSS3)
+   ========================================================================== */
+
+/* Contenedor principal del formulario */
+.flat-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #334155;
+    box-sizing: border-box;
+}
+
+/* Agrupación de campos (Responsive Grid) */
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etiquetas elegantes */
+.flat-form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #475569;
+    transition: color 0.2s ease;
+}
+
+/* Estilo base compartido para Input Text y Select */
+.flat-form input[type="text"],
+.flat-form input[type="email"],
+.flat-form input[type="password"],
+.flat-form input[type="number"],
+.flat-form select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+/* Personalización del menú desplegable (Select) */
+.flat-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    cursor: pointer;
+    padding-right: 2.5rem;
+}
+
+/* --- ESTADO HOVER (Pasar el cursor) --- */
+.flat-form input[type="text"]:hover,
+.flat-form input[type="email"]:hover,
+.flat-form input[type="password"]:hover,
+.flat-form input[type="number"]:hover,
+.flat-form select:hover {
+    border-color: #cbd5e1;
+    background-color: #f1f5f9;
+}
+
+/* --- ESTADO FOCUS / ACTIVO (Al hacer clic o navegar con teclado/Enter) --- */
+.flat-form input[type="text"]:focus,
+.flat-form input[type="email"]:focus,
+.flat-form input[type="password"]:focus,
+.flat-form input[type="number"]:focus,
+.flat-form select:focus {
+    background-color: #ffffff;
+    border-color: #3b82f6; /* Color de acento moderno */
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15); /* Halo de enfoque elegante */
+}
+
+/* Énfasis adicional mediante clase activa generada por JS al presionar Enter */
+.flat-form .is-active-focus {
+    border-color: #2563eb !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.25) !important;
+}
+
+/* Cambio de color en la etiqueta cuando el control está activo */
+.flat-form input:focus + label, 
+.flat-form input:focus ~ label,
+.flat-form select:focus ~ label {
+    color: #2563eb;
+}
+
+/* --- BOTONES PLANOS Y ELEGANTES --- */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.flat-btn {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+/* Botón Primario (Acción Principal) */
+.flat-btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.flat-btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.flat-btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Botón Secundario / Cancelar */
+.flat-btn-secondary {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.flat-btn-secondary:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+/* --- DISEÑO RESPONSIVO (Media Queries) --- */
+@media (max-width: 768px) {
+    .flat-form {
+        padding: 1.5rem;
+        margin: 1rem;
+        width: auto;
+    }
+    
+    .form-actions {
+        flex-direction: column-reverse; /* Apila los botones en móviles con el principal arriba o abajo según preferencia */
+    }
+}

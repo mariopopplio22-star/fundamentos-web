@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Estilos modernos para Tablas HTML (CSS3)
+   ========================================================================== */
+
+/* Contenedor opcional para permitir desplazamiento horizontal en móviles */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+}
+
+/* Estructura base de la tabla */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+    text-align: left;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Cabecera de la tabla */
+.styled-table thead tr {
+    background-color: #2c3e50; /* Color principal de la marca o diseño */
+    color: #ffffff;
+    text-align: left;
+    font-weight: 600;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* --- FILAS CEBREADAS (Zebra Striping) --- */
+/* Aplica un color de fondo sutil a las filas impares */
+.styled-table tbody tr:nth-child(odd) {
+    background-color: #f8fafc;
+}
+
+/* Las filas pares mantienen el fondo blanco (heredado de la tabla) */
+.styled-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* --- EFECTO HOVER SOBRE LA FILA ACTIVA --- */
+/* Cambia el color de fondo y añade una transición suave al pasar el cursor */
+.styled-table tbody tr {
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #edf2f7; /* Tono más marcado para destacar la fila activa */
+    cursor: pointer;          /* Opcional: indica que la fila es interactiva */
+}
+
+/* Opcional: Borde inferior más marcado en la última fila */
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2c3e50;
+}

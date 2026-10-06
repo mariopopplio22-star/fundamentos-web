@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- selector {} -->
+  <!-- CSS: Hojas de estilo en cascada -->
+  <!-- ¿Que es un selector? = a quien le afecta los atributos estilos -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+
+    /* Solo se puede usar una vez */
+    #titulo{
+      
+      text-align: center;
+      text-transform: uppercase; /* Mayusculas */
+      color: blue;
+      font-weight: bold; /* Negrita */
+    }
+    /* Le afecta a todas las etiquetas <p> */
+    p{
+      color: red; 
+      text-align: center; 
+      font-style:italic;
+      margin-top: 2em;
+      margin-bottom: 4em;
+    }
+    /* Clase que puede heredarse muchas veces */
+    .importante{
+      background-color: bisque;
+      border: 1px solid black;
+      padding: 1em; /* Espacio interno */
+    }
+
+    .Caja{
+      background-color: aquamarine;
+      width: 100px;
+      height: 60px;
+      text-align: center;
+      
+      display: inline-block; 
+      /*  padding-left: 40px;*/
+      padding-top: 40px;
+
+    }
+
+    .fondoimg{
+      background-image: url('/images/goku_normal.webp');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+  <h1 id="titulo">Fundamentos CSS</h1>
+    
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, doloremque deserunt placeat laboriosam fuga consequuntur dolorum odio amet quibusdam at recusandae fugit cupiditate a obcaecati minima ratione eius fugiat omnis?
+  </p>
+
+  <p class="importante fondoimg">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit odio et illum quod facere, unde ut eaque alias ad aliquam eum, fugit ea numquam beatae iure voluptatibus, incidunt at qui.
+  </p>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit odio et illum quod facere, unde ut eaque alias ad aliquam eum, fugit ea numquam beatae iure voluptatibus, incidunt at qui.
+  </p>
+
+  <hr> <!-- Linea horizontal -->
+  <br><!-- Salto de linea -->
+  
+  <div class="Caja">
+    Caja 1
+  </div>
+
+  <div class="Caja">
+    Caja 2
+  </div>
+</body>
+</html>
